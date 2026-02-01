@@ -1,0 +1,205 @@
+/* Premium Apple-Style Login/Register Aesthetic */
+
+.register-page {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+    /* Soft, sophisticated mesh gradient background */
+    background: radial-gradient(circle at 100% 0%, #e0f7fa 0%, #f0f4f8 100%);
+}
+
+/* Animated Aurora Background Effect */
+.register-page::before,
+.register-page::after {
+    content: '';
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 0;
+    opacity: 0.6;
+    animation: floatBlob 25s infinite alternate-reverse;
+}
+
+.register-page::before {
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(#d1f2eb, #e8daef);
+    top: -150px;
+    right: -100px;
+}
+
+.register-page::after {
+    width: 550px;
+    height: 550px;
+    background: radial-gradient(#d6eaf8, #fcf3cf);
+    bottom: -80px;
+    left: -80px;
+}
+
+@keyframes floatBlob {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+
+    100% {
+        transform: translate(-50px, -50px) scale(1.05);
+    }
+}
+
+.register-container {
+    width: 100%;
+    max-width: 480px;
+    /* Ultra-premium "Ceramic" Glass Effect */
+    background: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(40px) saturate(180%);
+    -webkit-backdrop-filter: blur(40px) saturate(180%);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 28px;
+    padding: 3rem 2.5rem;
+    box-shadow:
+        0 20px 40px rgba(0, 0, 0, 0.04),
+        0 40px 80px rgba(0, 0, 0, 0.03),
+        0 0 0 1px rgba(255, 255, 255, 0.6) inset;
+    position: relative;
+    z-index: 10;
+    transition: transform 0.4s ease;
+}
+
+.register-container:hover {
+    transform: translateY(-5px);
+}
+
+.register-header {
+    text-align: center;
+    margin-bottom: 2.5rem;
+}
+
+.register-title {
+    font-size: 2rem;
+    font-weight: 800;
+    color: #1d1d1f;
+    margin-bottom: 0.5rem;
+    letter-spacing: -0.025em;
+}
+
+.register-subtitle {
+    font-size: 1.05rem;
+    color: #86868b;
+    font-weight: 400;
+}
+
+.register-form {
+    margin-bottom: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+/* Reusing Input Styles from Login for Consistency */
+.input-group label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: #48484a;
+    margin-bottom: 0.5rem;
+    margin-left: 0.5rem;
+}
+
+.input-wrapper {
+    position: relative;
+    margin-bottom: 0.25rem;
+}
+
+.input-wrapper input {
+    width: 100%;
+    padding: 1rem 1rem 1rem 3.25rem;
+    background: rgba(239, 239, 240, 0.6);
+    border: 1px solid transparent;
+    border-radius: 16px;
+    font-size: 1rem;
+    color: #1d1d1f;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    outline: none;
+    font-weight: 500;
+}
+
+.input-wrapper input:focus {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: #007aff;
+    box-shadow: 0 0 0 4px rgba(0, 122, 255, 0.15);
+}
+
+.input-icon {
+    position: absolute;
+    left: 1.25rem;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 20px;
+    color: #86868b;
+    pointer-events: none;
+    transition: color 0.3s ease;
+}
+
+.input-wrapper:focus-within .input-icon {
+    color: #007aff;
+}
+
+.btn-register {
+    width: 100%;
+    padding: 0.75rem;
+    background: #007aff;
+    color: white;
+    font-weight: 600;
+    font-size: 1rem;
+    border-radius: 8px;
+    /* Standard rounded corners */
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0, 122, 255, 0.2);
+}
+
+.btn-register:hover {
+    background: #0062cc;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 122, 255, 0.3);
+}
+
+.btn-register svg {
+    width: 20px;
+    height: 20px;
+}
+
+.input-hint {
+    font-size: 0.8rem;
+    color: #86868b;
+    margin-top: 0.25rem;
+    margin-left: 0.75rem;
+}
+
+.register-footer {
+    text-align: center;
+    margin-top: 2rem;
+    color: #86868b;
+    font-size: 0.95rem;
+}
+
+@media (max-width: 640px) {
+    .register-container {
+        padding: 2rem 1.5rem;
+        border-radius: 24px;
+        background: rgba(255, 255, 255, 0.85);
+    }
+
+    .register-title {
+        font-size: 1.75rem;
+    }
+}
